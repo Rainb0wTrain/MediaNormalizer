@@ -27,3 +27,11 @@ filename, and renames files into a layout Jellyfin can match.
 javac -d out src/*.java
 java -cp out MediaNormalizer <libraryRoot> <inputDir>
 ```
+
+
+## Notes
+
+Parsing handles several real-world edge cases: release group suffixes,
+site prefixes on filenames, inconsistent separators (dots, underscores,
+spaces), and ambiguous year extraction where a four-digit number could
+be part of the title.
